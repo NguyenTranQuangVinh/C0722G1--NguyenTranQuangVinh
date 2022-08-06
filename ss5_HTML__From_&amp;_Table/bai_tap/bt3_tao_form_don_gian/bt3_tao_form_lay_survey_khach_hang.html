@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form lấy survey khách hàng</title>
+</head>
+<body>
+<h1><label>Maket Research Survey </label></h1>
+<h5>Please take a few moments to complete this satisfaction survey </h5>
+<hr />
+<label for="age"><b>What is your age range?</b></label>
+<br />
+<select name="rangeage" id="age" class="selectcustom">
+    <option value="18range">18-24</option>
+    <option value="25range">25-34</option>
+    <option value="35range">35-50</option>
+    <option value="51range">50+</option>
+</select>
+<br>
+<br>
+<label for="income"><b>What is your yearly income range?</b></label>
+<br />
+<select name="rangeincome" id="income" class="selectcustom">
+    <option value="under25000">$0 - $25,000</option>
+    <option value="under50000">$25,001 - $50,000</option>
+    <option value="under100000">$50,001 - $100,000</option>
+    <option value="higher100000">$100,000+</option>
+</select>
+<br>
+<br>
+<form action="/action_page.php">
+    Gender:<br/>
+    <label><input name="hobby" value="Nam giới" type="radio"/> Male</label> <br/>
+    <label><input name="hobby" value="Nữ giới" type="radio"/> Famale</label> <br/>
+</form>
+<br>
+<br>
+<form action="/action_page.php">
+    Which of the following products have your purchased in the last 2 months. Please check all that apply. <br/>
+    <label><input name="hobby" value="Sản phẩm 1" type="checkbox"/> Product 1</label> <br/>
+    <label><input name="hobby" value="Sản Phẩm 2" type="checkbox"/> Product 2</label> <br/>
+    <label><input name="hobby" value="Sản phẩm 3" type="checkbox"/> Product 3</label> <br/>
+</form>
+<br>
+<br>
+<form action="/action_page.php">
+    How ofen would you use our new product?<br/>
+    <label><input name="hobby" value="Hàng ngày" type="radio"/> Daily</label> <br/>
+    <label><input name="hobby" value="Hàng tuần" type="radio"/> Weekly</label> <br/>
+    <label><input name="hobby" value="Hàng tháng" type="radio"/> Monthly</label> <br/>
+</form>
+<br>
+<br>
+<p><b>What would you pay for the new product?</b></p>
+<table>
+    <tr>
+        <td>$</td>
+        <td><input style="width: 50px" value=""></td>
+        <td>.</td>
+        <td><input style="width: 20px" value=""></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Dollar</td>
+        <td></td>
+        <td>Cents</td>
+    </tr>
+</table>
+<br>
+<p><b>What features would you like to see in the new product.</b></p>
+<textarea cols="200" rows="12"></textarea>
+<br>
+<br>
+
+<p>Plaese rate your level of greement with the following statements.</p>
+    <table border="">
+        <tr>
+            <th></th>
+            <th>Strongly Disagree</th>
+            <th>Dissagree</th>
+            <th>Agree</th>
+            <th>Strongly</th>
+        </tr>
+        <tr>
+            <th>Our products era priced faily.</th>
+            <th><input name="hobby" value="1" type="radio"/><br> 1</th>
+            <th><input name="hobby" value="2" type="radio"/><br> 2</th>
+            <th><input name="hobby" value="3" type="radio"/><br> 3</th>
+            <th><input name="hobby" value="4" type="radio"/><br> 4</th>
+        </tr>
+        <tr>
+            <th>Our products are hight quality.</th>
+            <th><input name="hobby" value="1" type="radio"/><br> 1</th>
+            <th><input name="hobby" value="2" type="radio"/><br> 2</th>
+            <th><input name="hobby" value="3" type="radio"/><br> 3</th>
+            <th><input name="hobby" value="4" type="radio"/><br> 4</th>
+        </tr>
+        <tr>
+            <th>You would re commend our product to a friend or coworker.</th>
+            <th><input name="hobby" value="1" type="radio"/><br> 1</th>
+            <th><input name="hobby" value="2" type="radio"/><br> 2</th>
+            <th><input name="hobby" value="3" type="radio"/><br> 3</th>
+            <th><input name="hobby" value="4" type="radio"/><br> 4</th>
+        </tr>
+    </table>
+<br>
+<p><input type = "button" name="btSubmit" value="Submit"/></p>
+</body>
+</html>
