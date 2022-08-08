@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập điểm của một sinh viên</title>
+</head>
+<body>
+<section>
+    <form action="" name="datafrom">
+        <label> Điểm môn toán:</label><br>
+        <input id="toan" type= "text" name="toan" size="20"/><br>
+        <label> Điểm môn vật lý:</label><br>
+        <input id="vatly" type="text" name="vatly" size="20"/><br>
+        <label> Điểm môn hóa học:</label><br>
+        <input id="hoahoc" type="text" name="vatly" size="20"><br>
+        <input type="button" value="tinhtrungbinh" onclick="tinh()">
+    </form>
+</section>
+</body>
+<script>
+    function tinh() {
+        // let toan = +prompt("toan");
+        // let ly = +prompt("vatly");
+        // let hoa = +prompt("hoahoc");
+        let toan =+document.getElementById("toan").value;
+        let ly =+document.getElementById("vatly").value;
+        let hoa =+document.getElementById("hoahoc").value;
+        let tong=(toan+ly+hoa)
+        alert("dtb"+tong/3)
+    }
+</script>
+</html>
