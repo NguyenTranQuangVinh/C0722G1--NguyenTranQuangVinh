@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><label>Tính chỉ số cân nặng</label></h1><br>
+<form>
+    Nhập cân nặng:(kg)<input  id="nhapcannang" type="text" name="Nhập cân nặng" value="">
+    <br>
+ Nhập chiều cao:(m)<input id="nhapchieucao" type="text" name="Nhập chiều cao" value="">
+    <br><br>
+   <input type ="button" value="Kiểm tra" onclick="tinh()">
+    <p id ="display"></p>
+</form>
+</body>
+<script>
+function tinh() {
+    let nhapcannang= document.getElementById ("nhapcannang").value;
+    let nhapchieucao= document.getElementById("nhapchieucao").value;
+    let BMI;
+    BMI= nhapcannang / (Math.pow(nhapchieucao,2))
+    if (BMI < 18.5){
+        document.getElementById("display").innerHTML= "thiếu cân"+BMI;
+    }else if (BMI < 25.0){
+        document.getElementById("display").innerHTML=  "thông thường"+BMI;
+    }else  if (BMI < 30.0){
+        document.getElementById("display").innerHTML= "thừa cân"+BMI;
+    }else {
+        document.getElementById("display").innerHTML= "béo phì"+BMI;
+    }
+}
+</script>
+</html>
