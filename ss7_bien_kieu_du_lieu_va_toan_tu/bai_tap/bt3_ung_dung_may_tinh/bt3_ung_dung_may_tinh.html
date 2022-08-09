@@ -20,7 +20,7 @@
         let number1= document.getElementById("number1").value;
         let number2= document.getElementById("number2").value;
         let tong;
-        tong = (number1*1) + (number2*1);
+        tong = parseFloat(number1) + parseFloat(number2);
 
         document.getElementById("display").innerHTML= tong;
     }
@@ -28,21 +28,21 @@
         let number1 = document.getElementById("number1").value;
         let number2= document.getElementById("number2").value;
         let hieu;
-        hieu = (number1*1) - (number2*1)
+        hieu = parseFloat(number1) - parseFloat(number2)
         document.getElementById("display").innerHTML= hieu;
     }
     function nhan() {
         let number1 = document.getElementById("number1").value;
         let number2= document.getElementById("number2").value
         let sao;
-       sao = (number1*1) * (number2*1)
+       sao = parseFloat(number1) * parseFloat(number2)
         document.getElementById("display").innerHTML= sao;
     }
     function chia() {
         let number1 = document.getElementById("number1").value
         let number2= document.getElementById("number2").value
         let phan;
-         phan = (number1*1) / (number2*1)
+         phan = parseFloat(number1) / parseFloat(number2)
         document.getElementById("display").innerHTML= phan;
     }
 </script>
