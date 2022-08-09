@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number1">
+<input type="text" id="number2">
+<br>
+<br>
+<input type="button" value="cong" onclick="cong()">
+<input type="button" value="tru" onclick="tru()">
+<input type="button" value="nhan" onclick="nhan()">
+<input type="button" value="chia" onclick="chia()">
+<p id ="display"> kết quả </p>
+</body>
+<script>
+    function cong() {
+        let number1= document.getElementById("number1").value;
+        let number2= document.getElementById("number2").value;
+        let tong;
+        tong = (number1*1) + (number2*1);
+
+        document.getElementById("display").innerHTML= tong;
+    }
+    function tru() {
+        let number1 = document.getElementById("number1").value;
+        let number2= document.getElementById("number2").value;
+        let hieu;
+        hieu = (number1*1) - (number2*1)
+        document.getElementById("display").innerHTML= hieu;
+    }
+    function nhan() {
+        let number1 = document.getElementById("number1").value;
+        let number2= document.getElementById("number2").value
+        let sao;
+       sao = (number1*1) * (number2*1)
+        document.getElementById("display").innerHTML= sao;
+    }
+    function chia() {
+        let number1 = document.getElementById("number1").value
+        let number2= document.getElementById("number2").value
+        let phan;
+         phan = (number1*1) / (number2*1)
+        document.getElementById("display").innerHTML= phan;
+    }
+</script>
+</html>
