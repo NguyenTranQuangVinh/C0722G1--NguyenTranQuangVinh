@@ -17,10 +17,10 @@
 </body>
 <script>
 function tinh() {
-    let nhapcannang= document.getElementById ("nhapcannang").value;
-    let nhapchieucao= document.getElementById("nhapchieucao").value;
+    let nhapCanNang= document.getElementById ("nhapcannang").value;
+    let nhapChieuCao= document.getElementById("nhapchieucao").value;
     let BMI;
-    BMI= nhapcannang / (Math.pow(nhapchieucao,2))
+    BMI= nhapCanNang / (Math.pow(nhapChieuCao,2))
     if (BMI < 18.5){
         document.getElementById("display").innerHTML= "thiếu cân"+BMI;
     }else if (BMI < 25.0){
