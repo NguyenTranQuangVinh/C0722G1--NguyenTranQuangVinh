@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Nhập vào hai số a và b</title>
+<!--    <style>-->
+<!--        #display {-->
+<!--            width: 200px;-->
+<!--            height: 30px;-->
+<!--            background: orange;-->
+<!--        }-->
+<!--    </style>-->
 </head>
 <body>
-$END$
+<form>
+    Nhập số a:<input id="nhapsoa" type="text" name=" Nhập số a " value="">
+    <br>
+    Nhập số b:<input id="nhapsob" type="text" name=" Nhập số b " value="">
+    <br><br>
+    <input type="button" value="Kiểm tra" onclick="tinh()">
+    <p id="display"></p>
+</form>
+<!--<div id="display"></div>-->
 </body>
+<script>
+function tinh() {
+    let a = +document.getElementById("nhapsoa").value;
+    let b = +document.getElementById("nhapsob").value;
+
+    if (a % b == 0){
+        document.getElementById("display").innerHTML = " a chia hết cho b";
+    }else {
+        document.getElementById("display").innerHTML = "a không chia hết cho b";
+    }
+}
+</script>
 </html>
