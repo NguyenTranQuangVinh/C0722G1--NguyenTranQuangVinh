@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kt = prompt("Điểm bài kiểm tra");
+    let giuaKy = prompt("Điểm giữa kì");
+    let cuoiKy = prompt("Điểm cuối kì");
+    let tong = (kt+(giuaKy*2)+(cuoiKy*3))/6;
+    if (tong>=8){
+        alert("giỏi");
+} else if (tong>=6.5){
+        alert("khá");
+    } else if (tong>=5){
+        alert("trung bình");
+    } else {
+        alert("yếu");
+    }
+</script>
+</body>
+</html>
