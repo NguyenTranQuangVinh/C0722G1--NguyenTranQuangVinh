@@ -27,7 +27,7 @@
         </td>
         <td></td>
         <td>
-            <button type="button" onclick="Convert()">Convert</button>
+            <button type="button" onclick="convert()">convert</button>
         </td>
 
     </tr>
@@ -37,17 +37,17 @@
 </table>
 </body>
 <script>
-    function Convert() {
-        let Amount = document.getElementById("sotien").value;
+    function convert() {
+        let amount = document.getElementById("sotien").value;
         let VND = document.getElementById("vnd").value;
         let USD = document.getElementById("usd") .value;
-        let Result;
+        let result;
         if (VND == "vnd" && USD == "usd") {
-           Result = ("Result:" + Amount / 23000 +"$");
+           result = ("result:" + amount / 23000 +"$");
         }else if(VND == "usd" && USD == "vnd"){
-            Result =("Result:"+ Amount*23000 +"vnd");
+            result =("result:"+ amount*23000 +"vnd");
         }
-        document.getElementById("display").innerHTML = Result;
+        document.getElementById("display").innerHTML = result;
     }
 </script>
 </html>
