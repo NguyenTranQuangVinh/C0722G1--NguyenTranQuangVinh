@@ -6,8 +6,16 @@
 </head>
 <body>
 <script>
-    let hoaHong = prompt("nhập doanh số bán hàng");
-
+    let doanhThu = prompt("nhập doanh số bán hàng");
+    if (doanhThu >= 15000) {
+        alert("Bạn nhận được 15% hoa hồng.");
+    }else if (doanhThu >= 1000){
+        alert("Bạn nhận được 10% hoa hồng.");
+    }else if (doanhThu >= 5000){
+        alert("Bạn nhận được 5% hoa hồng.");
+    }else {
+        alert("Bạn không nhận được hoa hồng.")
+    }
 </script>
 </body>
 </html>
