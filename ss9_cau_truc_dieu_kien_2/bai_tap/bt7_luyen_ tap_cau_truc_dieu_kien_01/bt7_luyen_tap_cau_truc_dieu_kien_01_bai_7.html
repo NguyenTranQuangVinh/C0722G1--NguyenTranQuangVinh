@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let thoiGian = prompt("nhập vào số giây cuộc gọi");
+    let tienGoiDien;
+    if (thoiGian >= 5){
+        tienGoiDien = thoiGian*15000;
+        alert(tienGoiDien + "đồng");
+    } else if (thoiGian >= 1){
+        tienGoiDien= thoiGian*3000;
+        alert(tienGoiDien+ "đồng");
+    }
+</script>
 </body>
 </html>
