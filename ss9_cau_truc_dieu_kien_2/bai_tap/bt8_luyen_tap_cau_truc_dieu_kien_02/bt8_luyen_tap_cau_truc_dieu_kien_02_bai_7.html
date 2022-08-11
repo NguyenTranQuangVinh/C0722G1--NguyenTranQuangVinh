@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập bất phương trình bậc 2 a");
+    let b = +prompt("Nhập bất phương trình bậc 2 b");
+    let c = +prompt("Nhập bất phương trình bậc 2 c");
+    let dental = Math.pow(b,2) - 4 * a * c
+    if (dental < 0) {
+        alert("Phương trình vô nghiệm");
+    } else if (dental > 0) {
+        alert("Phương trình có 2 nghiệm" + "x1 =" + ((-b + Math.sqrt(dental)) / (2 * a)) + 'và x2 =' +((-b - Math.sqrt(dental)) / (2 * a)));
+    } else{
+        alert("Bất phuong trình có 2 nghiệm kép" + ((-b) / 2 * a))
+    }
+</script>
+</body>
+</html>
