@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let fibonacci;
+let number1 = 1;
+let number2 = 1;
+let tong =0;
+for (let i = 0; i < 20; i++) {
+    fibonacci = number2 + number1;
+    document.write(number1+ " + " + number2 + " = " +fibonacci);
+    number1 = number2;
+    number2 = fibonacci;
+    document.write('<br>');
+    tong +=fibonacci;
+}
+document.write('Tổng 20 số F đầu tiền là: '+tong);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhietDo;
+    do {
+        nhietDo = prompt("Nhập nhiệt độ của bạn");
+        if (nhietDo >= 100){
+            alert("Yêu cầu giảm nhiệt độ");
+        }else if (nhietDo <= 20){
+            alert("Yêu cầu tăng nhiệt độ");
+        }
+        else {
+            alert("nhiệt độ được đặt:" + nhietDo);
+        }
+    } while (20 >= nhietDo || nhietDo >= 100)
+
+</script>
+</body>
+</html>

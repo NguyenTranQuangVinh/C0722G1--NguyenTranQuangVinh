@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fibonacci;
+    let number1 =1;
+    let number2 =1;
+    let n = prompt("Nhập 1 số bất kì");
+    for (let i = 0; i < n ; i++) {
+      fibonacci=number2+number1;
+      number1=number2;
+      number2=fibonacci;
+      document.write(fibonacci+'<br>');
+    }
+
+</script>
+</body>
+</html>
