@@ -6,21 +6,24 @@
 </head>
 <body>
 <script>
-    for (let i = 1; i <= 5; i++) {
-        for (let j = 1; j <= i; j++)
+    for (let l = 1; l <= 2; l++) {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++)
+            {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for (let i = 5;i >= 1; i--)
         {
-            document.write("*");
+            for (let j = 1; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
         }
-        document.write("<br>");
     }
-    document.write("<br>");
-    for (let i = 5;i >= 1; i--)
-    {
-        for (let j = 1; j <= i; j++) {
-            document.write("*");
-        }
-        document.write("<br>");
-    }
+
     </script>
 </body>
 </html>
