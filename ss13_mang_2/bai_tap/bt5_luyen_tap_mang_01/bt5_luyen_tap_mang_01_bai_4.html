@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doDai = +prompt("Nhập độ dài của mạng: ");
+    let mangSoNguyen = [];
+    for (let i = 0; i < doDai; i++) {
+        mangSoNguyen[i] = +prompt("Nhập số phần tử");
+    }
+        let first = 0;
+        let last = mangSoNguyen.length - 1;
+        while (first < last) {
+            let viTri = mangSoNguyen[first];
+            mangSoNguyen[first] = mangSoNguyen[last];
+            mangSoNguyen[last] = viTri;
+            first++;
+            last--;
+        }
+        document.write(mangSoNguyen);
+
+</script>
+</body>
+</html>
