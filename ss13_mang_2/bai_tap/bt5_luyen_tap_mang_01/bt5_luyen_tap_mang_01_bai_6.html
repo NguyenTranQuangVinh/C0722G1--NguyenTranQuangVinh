@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhâp số pt của mảng")
+    let arr = new Array(n);
+    for (let i = 0; i <arr.length ; i++) {
+        arr[i] = +prompt("nhập giá trị cho pt thứ "+i);
+    }
+    alert(arr)
+    let v = +prompt("nhâp  vào số v");
+       if (arr.includes(v))
+       {
+           alert("V is in the array");
+       }else {
+           alert("V is not in the array");
+       }
+
+</script>
+</body>
+</html>
