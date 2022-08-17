@@ -8,11 +8,19 @@
 <!--Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược. -->
 <!--Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"-->
 <script>
-    let array= [ 'c', 's', 'c', '2', '6', '1' ];
-    let first = 0;
-    let last = array.length -1;
-    for (let i = 0; i <array.length/2; i++) {
-    }
+ let array = ['c', 's', 'c', '2','6','1'];
+ let first=0;
+ let last = array.length-1;
+ let daoChieu=" ";
+ while (first<last){
+     daoChieu=array[first];
+     array[first]=array[last];
+     array[last]=daoChieu;
+     first++;
+     last--;
+
+ }document.write(array.join(''));
+
 </script>
 </body>
 </html>

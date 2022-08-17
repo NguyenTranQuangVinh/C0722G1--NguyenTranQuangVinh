@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.-->
+<!--Chương trình này đếm số ký tự số trong mảng.-->
+<script>
+  let array=[];
+  let size = +prompt("Nhập kích thước");
+  let count =0;
+  for (let i = 0; i < size; i++) {
+      let number =prompt("Nhập kí tự");
+      array.push(number);
+      if (array[i]%1==0){
+          count++;
+      }
+  }
+  document.write("Độ dài mảng "+size+"<br>"+"có tất cả "+count+" số");
+</script>
+</body>
+</html>
