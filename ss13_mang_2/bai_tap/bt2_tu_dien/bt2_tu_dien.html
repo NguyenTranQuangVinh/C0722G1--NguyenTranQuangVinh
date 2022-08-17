@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let english = ["hello", "good night", "bye", "banana"];
+    let vietNam = ["xin chào", "ngủ ngon", "tạm biệt ", "quả chuối"];
+    let dich = prompt("nhập từ tiếng anh: ")
+
+    let count ;
+    let kiemTra = false
+    for (let i = 0; i < english.length; i++) {
+        if (dich === english[i]) {
+            kiemTra = true
+            count = i;
+            break;
+        }
+    }
+    if(kiemTra){
+        document.write(vietNam[count])
+    } else {
+        document.write("không tìm thấy.")
+    }
+</script>
+</body>
+</html>
+
