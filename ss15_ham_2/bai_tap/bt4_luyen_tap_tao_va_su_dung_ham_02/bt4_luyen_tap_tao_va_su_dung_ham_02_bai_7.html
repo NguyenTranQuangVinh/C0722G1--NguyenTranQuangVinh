@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 7:  Viết truyền hàm vào 2 số nguyên, thực hiện thay đổi chỗ hai số nguyên.-->
+<body>
+</body>
+<script>
+    function doiCho(num1,num2) {
+    let dem=num1;
+    num1=num2;
+    num2=dem;
+    return alert("Số 1: "+num1+"Số 2: "+num2);
+    }
+    let num1=+prompt("Nhập số thứ nhất: ");
+    let num2=+prompt("Nhập số thứ hai: ");
+    (doiCho(num1,num2));
+</script>
+</html>

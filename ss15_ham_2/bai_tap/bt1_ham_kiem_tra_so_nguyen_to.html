@@ -7,22 +7,37 @@
 <body>
 <script>
     function isPrime(num) {
-        if (num < 2) {
-            return false;
-        }
-        for (let i = 2; i < num ; i++) {
-            if(num % i === 0){
-                return false;
+        let dem = 0;
+        for (let i = 1; i <= num; i++) {
+            if (num % i === 0) {
+                dem++;
             }
         }
-        return true;
-    }
-
-    for (let i = 0; i <= 10000 ; i++) {
-        if(isPrime(i)){
-            document.write(i+"<br>");
+        if(dem===2){
+            return alert(num+ " là số nguyên tố");
+        }
+        else {
+            return alert(num+" không phải là số nguyên tố");
         }
     }
+    isPrime(+prompt("Nhập số"));
+    //     if (num < 2) {
+    //         return false;
+    //     }
+    //     for (let i = 2; i < num ; i++) {
+    //         if(num % i === 0){
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+
+    // for (let i = 0; i <= 10000 ; i++) {
+    //     if(isPrime(i)){
+    //         document.write(i+"<br>");
+    //     }
+    // }
+
 </script>
 </body>
 </html>
