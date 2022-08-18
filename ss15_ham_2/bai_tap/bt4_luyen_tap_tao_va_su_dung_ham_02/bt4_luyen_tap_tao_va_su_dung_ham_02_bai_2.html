@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được-->
+<body>
+</body>
+<script>
+    function dienTich(R) {
+        let S = R * R * Math.PI;
+        return S;
+    }
+
+    function chuVi(R) {
+        let P = R * 2 * Math.PI;
+        return P;
+    }
+
+    let R = +prompt("Nhập số diện tích vào đây: ");
+    alert("Diện tích hình tròn là: " + dienTich(R))
+    alert("Chu vi hình tròn là: " + chuVi(R))
+</script>
+</html>
