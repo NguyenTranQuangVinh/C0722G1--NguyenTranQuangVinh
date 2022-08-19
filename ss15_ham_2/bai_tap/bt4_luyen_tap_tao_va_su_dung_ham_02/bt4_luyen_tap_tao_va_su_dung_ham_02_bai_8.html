@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<!--Bài 8:  Viết truyền hàm vào bất kỳ số nguyên nào, sau đó chuyển đổi số nguyên.-->
+<!--Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó. .-->
 <body>
 </body>
 <script>
+    let arr=[];
+    let size=+prompt("Nhập độ dài mảng: ");
+    for (let i = 0; i <size ; i++) {
+        arr[i]=+prompt("Nhập số nguyên bất kì: "+(i+1));
+    }
+    let first = 0;
+    let last = arr.length - 1;
+    while (first < last) {
+        let viTri = arr[first];
+        arr[first] = arr[last];
+        arr[last] = viTri;
+        first++;
+        last--;
+    }
+    document.write("Đảo ngược mảng của số nguyên đó là: " +arr);
 
 </script>
 </html>

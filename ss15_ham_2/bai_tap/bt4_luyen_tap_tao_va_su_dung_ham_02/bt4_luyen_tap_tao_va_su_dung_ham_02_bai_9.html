@@ -4,7 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<!--Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.-->
+<!--Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.-->
 <body>
-
+<script>
+       function checkNumber(arr,num) {
+           let count = 0;
+           for(let i =0; i<arr.length;i++){
+               if(arr[i] == num){
+                count++;
+               }
+           }
+           if(count==0){
+               return -1;
+           }
+           else {
+               return count;
+           }
+    }
+    let number = +prompt("Nhập 1 số vào đây: ");
+       let arrs = [1,2,3,4,5,6,7,8,9];
+    document.write(checkNumber(arrs,number));
+</script>
 </body>
 </html>
