@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    class doiDo {
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        doiDoF() {
+            document.write('Độ F là: ' + (9 / 5 * this.doC + 32) + '<br>')
+        }
+
+        doiDoK() {
+            document.write('Độ K là: ' + (this.doC + 273.15) + '<br>');
+        }
+
+    }
+
+    let nhietDo = new doiDo(25);
+    nhietDo.doiDoF();
+    nhietDo.doiDoK();
+</script>
+</html>
