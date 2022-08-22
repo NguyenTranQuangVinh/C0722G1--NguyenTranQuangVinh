@@ -12,16 +12,16 @@
         this.dai=dai;
         this.rong=rong;
         }
-        getChieuDai(){
+        layChieuDai(){
             return this.dai;
         }
-        getChieuRong(){
+        layChieuRong(){
             return this.rong;
         }
-        getChuVi(){
+        layChuVi(){
             return (this.dai+this.rong)*2;
         }
-        getDienTich(){
+        layDienTich(){
             return this.dai*this.rong;
         }
         veHinh(toaDoX,toaDoY){
@@ -34,10 +34,10 @@
     }
 
     let hinhChuNhat2=new HinhChuNhat(44,33);
-    document.write("chiều dài là: "+hinhChuNhat2.getChieuDai() +"<br>");
-    document.write("chiều rong là: "+hinhChuNhat2.getChieuRong() +"<br>");
-    document.write("chu vi là: "+hinhChuNhat2.getChuVi() +"<br>");
-    document.write("diện tích là: "+hinhChuNhat2.getDienTich() +"<br>");
+    document.write("chiều dài là: "+hinhChuNhat2.layChieuDai() +"<br>");
+    document.write("chiều rong là: "+hinhChuNhat2.layChieuRong() +"<br>");
+    document.write("chu vi là: "+hinhChuNhat2.layChuVi() +"<br>");
+    document.write("diện tích là: "+hinhChuNhat2.layDienTich() +"<br>");
     hinhChuNhat2.veHinh(1,1)
 </script>
 </body>
