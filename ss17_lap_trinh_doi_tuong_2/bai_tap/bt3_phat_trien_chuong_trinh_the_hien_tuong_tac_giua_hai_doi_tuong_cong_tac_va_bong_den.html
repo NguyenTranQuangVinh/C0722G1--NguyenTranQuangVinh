@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class BongDen {
+        constructor() {
+            this.trangThai = false;
+        }
+
+        gettrangThai() {
+            return this.trangThai;
+        }
+
+        denSang() {
+            this.trangThai = true;
+        }
+
+        denTat() {
+            this.trangThai = false;
+        }
+    }
+
+    class CongTac {
+        constructor() {
+            this.trangThaiCongTac = false;
+            this.BongDen = null;
+        }
+
+        gettrangThaiCongTac() {
+            return this.gettrangThaiCongTac;
+        }
+
+        noiBongDen(bongDen) {
+            this.BongDen = bongDen;
+        }
+
+        congTacMo() {
+            this.trangThaiCongTac = true;
+            this.BongDen.denSang();
+        }
+
+        conTacDong() {
+            this.trangThaiCongTac = false;
+            this.BongDen.denTat();
+        }
+
+    }
+
+    let BongDen1 = new BongDen();
+    let CongTac1 = new CongTac();
+    CongTac1.noiBongDen(BongDen1);
+    CongTac1.congTacMo();
+    for (let i = 0; i < 10; i++) {
+        CongTac1.congTacMo();
+        document.write("Công tắc bật đèn: " + BongDen1.gettrangThai() + "<br>");
+        CongTac1.conTacDong();
+        document.write("Công tắc tắt đèn : " + BongDen1.gettrangThai() + "<br>");
+    }
+</script>
+</body>
+</html>
