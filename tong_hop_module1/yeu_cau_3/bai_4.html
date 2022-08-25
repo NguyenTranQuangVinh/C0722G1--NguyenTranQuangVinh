@@ -5,6 +5,44 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let nhapSo = prompt("nhap và mot só")
+    let kq = "";
+    for (let i = 0; i < nhapSo.length; i++) {
+        switch (nhapSo[i]) {
+            case "0":
+                kq += " Không ";
+                break;
+            case "1":
+                kq += " Một ";
+                break;
+            case "2":
+                kq += " Hai ";
+                break;
+            case "3":
+                kq += " Ba ";
+                break;
+            case "4":
+                kq += " Bốn ";
+                break;
+            case "5":
+                kq += " Năm ";
+                break;
+            case "6":
+                kq += " Sáu ";
+                break;
+            case "7":
+                kq += " Bảy ";
+                break;
+            case "8":
+                kq += " Tám ";
+                break;
+            case "9":
+                kq += " Chín ";
+                break;
+        }
+    }
+    alert(kq);
+</script>
 </body>
 </html>
