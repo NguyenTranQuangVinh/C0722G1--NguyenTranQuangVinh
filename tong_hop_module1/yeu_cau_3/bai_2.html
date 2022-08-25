@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberA =[7,2,5,3,5,3];
+    let numberB =[7,2,5,4,6,3,5,3];
+    let result = [];
+    for (let i = 0; i < numberB.length; i++) {
+        if(numberA.includes(numberB[i])===false){
+            if (result.includes(numberB[i])===false){
+                result.push(numberB[i]);
+            }
+        }
+    }
+    document.write(result);
+</script>
+</body>
+</html>

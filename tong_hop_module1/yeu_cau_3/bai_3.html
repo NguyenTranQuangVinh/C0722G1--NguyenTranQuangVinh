@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lonNhat = 0;
+    let viTri = 0;
+    let tuSo = [6,3,4];
+    let mauSo = [5,2,5];
+    for (let i = 0; i < tuSo.length ; i++) {
+        if(tuSo[i]/mauSo[i] > lonNhat){
+            lonNhat = tuSo[i]/mauSo[i];
+            viTri=i;
+        }
+    }
+    document.write(tuSo[viTri]+"/"+mauSo[viTri]+' là phân số lớn nhất. ');
+</script>
+</body>
+</html>

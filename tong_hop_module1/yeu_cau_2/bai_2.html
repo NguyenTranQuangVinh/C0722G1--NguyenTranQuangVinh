@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nguyenAm1 = ["u", "e", "o", "a", "i"];
+    let nguyenAm2 = ["U", "E", "O ", "A", "I"];
+    let kiTu = prompt("nhập kí tự bất kì: ");
+
+
+    let kiemTra = false;
+    for (let i = 0; i < nguyenAm1.length; i++) {
+        if (kiTu === nguyenAm1[i]|| kiTu === nguyenAm2[i]) {
+            kiemTra = true;
+        }
+    }
+        if(kiemTra){
+            document.write(kiTu+" là nguyên âm ");
+        } else {
+            document.write(kiTu+" là phụ âm ");
+        }
+
+</script>
+</body>
+</html>
