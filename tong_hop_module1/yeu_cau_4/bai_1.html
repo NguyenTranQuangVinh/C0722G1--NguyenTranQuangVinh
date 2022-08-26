@@ -6,7 +6,23 @@
 </head>
 <body>
 <script>
-
+    let ten = prompt("Nhập tên ");
+function chuyenDoi(name) {
+    name=name.toLowerCase();
+    let arr = name.split(" ");
+    let arr1=[];
+    for (let i = 0; i <arr.length ; i++) {
+        if (arr[i]!==""){
+            arr1.push(arr[i]);
+        }
+    }
+    for (let i = 0; i <arr1.length ; i++) {
+        arr1[i][0]= arr1[i][0].toLocaleUpperCase();
+        arr1[i]=arr1[i].join("");
+    }
+    return arr1.join(' ');
+}
+    document.write(chuyenDoi(ten));
 </script>
 </body>
 </html>
