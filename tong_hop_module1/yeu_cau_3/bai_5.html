@@ -6,7 +6,64 @@
 </head>
 <body>
 <script>
+    let tongTien = 0;
+    let flag=true;
+    do {
+        let menu = prompt("Menu \n" +
+            "1. Cafe\n" +
+            "2. Cam vắt\n" +
+            "3. Nước ép cà rốt\n" +
+            "4. Nước ép cà chua\n" +
+            "5. Nước lọc\n" +
+            "6. Nước dừa\n" +
+            "7. Thoát gọi món");
 
+        let soLuong = 0;
+        let gia1 = 10;
+        let gia2 = 20;
+        let gia3 = 20;
+        let gia4 = 20;
+        let gia5 = 5;
+        let gia6 = 30;
+        switch (menu) {
+            case "1":
+                alert("Giá của cafe là: " + gia1 + ".000 VNĐ");
+                soLuong = prompt("Nhập số luọng cafe: ");
+                tongTien += gia1 * soLuong;
+                break;
+            case "2":
+                alert("Giá của cam vắt là: " + gia2 + ".000 VNĐ");
+                soLuong = prompt("Nhập số lương nước cam vắt: ");
+                tongTien += gia1 * soLuong;
+                break;
+            case "3":
+                alert("Giá của nước ép cà rốt là: " + gia3 + ".000");
+                soLuong = prompt("Nhập số lượng nước ép cà rốt: ");
+                tongTien += gia1 * soLuong;
+                break;
+            case "4":
+                alert("Giá của nước ép cà chua là: " + gia4 + ".000");
+                soLuong = prompt("Nhập số lượng nước ép cà chua: ");
+                tongTien += gia1 * soLuong;
+                break;
+            case "5":
+                alert("Giá của nước lọc là: " + gia5 + ".000");
+                soLuong = prompt("Nhập số lượng nước lọc: ")
+                tongTien += gia1 * soLuong;
+                break;
+            case "6":
+                alert("Giá của nước dừa là: " + gia6 + ".000");
+                soLuong = prompt("Nhập số lượng nước dừa: ")
+                tongTien += gia1 * soLuong;
+                break;
+            default :
+                alert("Thoát gọi món.");
+                flag=false;
+
+        }
+    }while (flag)
+
+alert("tổng tiền hóa đơn "+tongTien+".000 VND.");
 </script>
 </body>
 </html>
