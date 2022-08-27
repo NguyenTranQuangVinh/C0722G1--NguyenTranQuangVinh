@@ -6,23 +6,6 @@
 </head>
 <body>
 <script>
-    let mang1 = "aabcc";
-    let mang2 = "adcaa";
-    let tachMang1 = mang1.split('');
-    let tachMang2 = mang2.split('');
-    let mang3 = [];
-    for (let i = 0; i < tachMang1.length; i++) {
-        for (let j = 0; j < tachMang2.length; j++) {
-            if (tachMang1[i] === tachMang2[j]) {
-                mang3.push(tachMang1[i]);
-                tachMang2.splice(j, 1);
-                break;
-            }
-        }
-    }
-    document.write("các ký tự chung: " + mang3.toString()+"<br>");
-
-    document.write("số ký tự chung:" + mang3.length);
 
 </script>
 </body>

@@ -6,8 +6,36 @@
 </head>
 <body>
 <script>
-    let arr=[[2,3,4,5,6,7][8,9,10,11,12]];
+    let arr=[[2,3,4,5,6,7],[8,9,10,11,12]];
+    function kiemTraSo(so) {
+        let count = 0;
+        if (so < 2) {
+            return false
+        } else {
+            for (let i = 2; i < so; i++) {
+                if (so % i === 0) {
+                    count ++;
+                }
+            }
+        }
+        if (count === 0) {
+            return true;
+        }
+    }
 
+    function kiemTraMang(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (kiemTraSo(arr[i][j]) === true) {
+                    document.write(arr[i][j] + "<br>");
+                    count++;
+                }
+            }
+        }
+        document.write("Các số nguyên tố là : " + count + "<br>")
+    }
+    kiemTraMang(arr);
 </script>
 
 </body>

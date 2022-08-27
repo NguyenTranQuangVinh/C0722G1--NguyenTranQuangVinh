@@ -13,16 +13,16 @@ function chuyenDoi(name) {
     let arr1=[];
     for (let i = 0; i <arr.length ; i++) {
         if (arr[i]!==""){
-            arr1.push(arr[i]);
+            arr1.push(arr[i].split(""));
         }
     }
     for (let i = 0; i <arr1.length ; i++) {
         arr1[i][0]= arr1[i][0].toLocaleUpperCase();
         arr1[i]=arr1[i].join("");
     }
-    return arr1.join(' ');
+    return arr1.join(" ");
 }
-    document.write(chuyenDoi(ten));
+    document.write("Tên sau khi chuyển hóa: "+chuyenDoi(ten));
 </script>
 </body>
 </html>
