@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="result"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="nhap(1)"></td>
+        <td><input type="button" value="2" onclick="nhap(2)"></td>
+        <td><input type="button" value="3" onclick="nhap(3)"></td>
+        <td><input type="button" value="+" onclick="nhap('+')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="nhap(4)"></td>
+        <td><input type="button" value="5" onclick="nhap(5)"></td>
+        <td><input type="button" value="6" onclick="nhap(6)"></td>
+        <td><input type="button" value="-" onclick="nhap('-')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="nhap(7)"></td>
+        <td><input type="button" value="8" onclick="nhap(8)"></td>
+        <td><input type="button" value="9" onclick="nhap(9)"></td>
+        <td><input type="button" value="=" onclick="bang('=')"></td>
+    </tr>
+</table>
+</body>
+<script>
+    function nhap(so) {
+        document.getElementById("result").value += so;
+
+    }
+
+    function bang() {
+        let bieuThuc = document.getElementById("result").value;
+        let ketQua = eval(bieuThuc);
+        document.getElementById("result").value = ketQua;
+
+    }
+</script>
+</body>
+</html>
