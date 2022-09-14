@@ -5,25 +5,48 @@
     <title>Title</title>
 </head>
 <body>
+<!--Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau-->
 <script>
-    for (let l = 1; l <= 2; l++) {
-        for (let i = 1; i <= 5; i++) {
-            for (let j = 1; j <= i; j++)
-            {
-                document.write("*");
-            }
-            document.write("<br>");
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 5; j >= i; j--) {
+            document.write("*");
+        }
+        for (let j = 1; j <= i; j++) {
+            document.write("&nbsp&nbsp");
+        }
+
+        document.write("<br>");
+
+    }
+    document.write("<br>");
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 1; j < i; j++) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let k = 5; k >= i; k--) {
+            document.write("*");
         }
         document.write("<br>");
-        for (let i = 5;i >= 1; i--)
-        {
-            for (let j = 1; j <= i; j++) {
-                document.write("*");
-            }
-            document.write("<br>");
-        }
     }
-
-    </script>
+    document.write("<br>");
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 4; i <= j; j--) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let k = 1; k <= i; k++) {
+            document.write("*")
+        }
+        document.write("<br>");
+    }
+</script>
 </body>
 </html>

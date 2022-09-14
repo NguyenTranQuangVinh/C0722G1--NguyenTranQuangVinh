@@ -5,16 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<!--Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu,
+ số tháng cho vay và lãi xuất hàng tháng.-->
 <script>
     let tienGui = +prompt("nhập số tiền")
-    let thang = +prompt("nhập số tháng gửi")
-    let soTienCuoi ;
+    let soThang = +prompt("nhập số tháng gửi")
+    let soTienCuoiCung ;
     let tienLai;
-    for (let i = 1; i <= thang ; i++) {
-        tienLai = tienGui*(0.3/100);
-        soTienCuoi = tienGui + tienLai;
-        tienGui = soTienCuoi;
-    }alert(soTienCuoi)
+    for (let i = 1; i <= soThang ; i++) {
+        tienLai = tienGui*0.1;
+        soTienCuoiCung = tienGui + tienLai;
+        tienGui = soTienCuoiCung;
+    }alert(soTienCuoiCung);
 </script>
 </body>
 </html>
