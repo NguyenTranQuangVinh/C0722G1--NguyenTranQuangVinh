@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 2: Viết hàm làm các công việc sau:-->
+<!-- - Cho phép người dùng nhập vào 1 kí tự. Kiểm tra xem kí tự đó có phải là số hay-->
+<!--không. Nếu phải hiển thị thông báo-->
+<!-- - Cho phép người dùng nhập vào 1 số. Kiểm tra xem số đó có phải là số nguyên-->
+<!--tố hay không, Nếu phải return true, không thì return false-->
+<!-- - Viết hàm có 1 tham số đầu vào và kiểm tra tham số đầu vào đó có phải là số-->
+<!--hoàn hảo hay không. Nếu phải trả về true, không trả về false-->
+</body>
+<script>
+    // <!-- - Cho phép người dùng nhập vào 1 kí tự. Kiểm tra xem kí tự đó có phải là số hay-->
+    // <!--không. Nếu phải hiển thị thông báo-->
+function kiemTraKyTu(kyTu) {
+  kyTu= +prompt("Nhập ký tự: ");
+  if(!isNaN(kyTu)){
+    alert("Ký tự đó là: "+kyTu);
+  }else {
+      alert("ký tự không phải là số:");
+  }
+}
+kiemTraKyTu();
+//     <!-- - Cho phép người dùng nhập vào 1 số. Kiểm tra xem số đó có phải là số nguyên-->
+//     <!--tố hay không, Nếu phải return true, không thì return false-->
+function checkPrimes(n) {
+
+    if( n ===2){
+        return true;
+    }
+    for (let i = 2; i <n ; i++) {
+        if (n%i===0){
+            return false;
+    }
+        return true;
+}}
+    n= +prompt("Nhập số nguyên tố: ");
+alert(checkPrimes(n));
+//     <!-- - Viết hàm có 1 tham số đầu vào và kiểm tra tham số đầu vào đó có phải là số-->
+//     <!--hoàn hảo hay không. Nếu phải trả về true, không trả về false-->
+    function soHoanHao(x) {
+if(Number.isInteger(x)){
+return true;
+}
+return false;
+    }
+    alert("số hoàn hảo: "+soHoanHao(4));
+</script>
+</html>
