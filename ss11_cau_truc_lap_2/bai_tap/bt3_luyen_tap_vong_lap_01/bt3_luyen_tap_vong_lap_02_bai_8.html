@@ -5,8 +5,28 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-
-</script>
+<!--game đoán số.-->
+<input type="button" value="Chơi" onclick="start()">
 </body>
+<script>
+    function start() {
+        let nhapKhoang = parseInt(prompt("Số bạn muốn đoán nằm trong khoảng tối đa là bao nhiêu: "));
+        let nhapSo = parseInt(prompt("Nhập số bạn đoán"));
+        let random = Math.floor(Math.random() * nhapKhoang);
+        if (random === nhapSo) {
+            alert("xin chúc mừng")
+        } else {
+            for (let i = 1; i < 4; i++) {
+                if (nhapSo < random) {
+                    alert("Số bạn đoán nhỏ hơn");
+                    nhapSo = parseInt(prompt("Nhập số bạn đoán"));
+                } else {
+                    alert("Số bạn đoán lớn hơn");
+                    nhapSo = parseInt(prompt("Nhập số bạn đoán"));
+                }
+            }
+            alert("Bạn đã hết số lần đoán");
+        }
+    }
+</script>
 </html>
