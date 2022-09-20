@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ngoiSao(sao) {
+        let sao1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let sao2 = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        for (let i = 0; i < sao1.length; i++) {
+            if (sao === sao1[i]) {
+                return sao2[i];
+            }
+        }
+        return "Không tìm thấy sao."
+    }
+    document.write(ngoiSao(prompt("Nhập tên ngôi sao.")));
+</script>
+</body>
+</html>
