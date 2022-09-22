@@ -6,60 +6,49 @@
 </head>
 <body>
 <script>
-    class BongDen {
+    class ElectricLamp{
         constructor() {
-            this.trangThai = false;
+            this.status = false;
         }
-
-        gettrangThai() {
-            return this.trangThai;
+        getStatus(){
+            return this.status;
         }
-
-        denSang() {
-            this.trangThai = true;
+        turnOff(){
+            this.status = "Chưa bật đèn à, tối quée";
         }
-
-        denTat() {
-            this.trangThai = false;
+        turnOn(){
+            this.status = "Đèn đã sáng";
         }
     }
-
-    class CongTac {
+    class SwitchButton {
         constructor() {
-            this.trangThaiCongTac = false;
-            this.BongDen = null;
+            this.status = false;
+            this.Lamp = null;
+        }
+        connectToLamp(ElectricLamp) {
+            this.lamp = ElectricLamp;
         }
 
-        gettrangThaiCongTac() {
-            return this.gettrangThaiCongTac;
+        switchOn() {
+            if (this.lamp != null) {
+                this.status = true;
+                this.lamp.turnOn();
+            }
         }
-
-        noiBongDen(bongDen) {
-            this.BongDen = bongDen;
+        switchOff() {
+            this.status = false;
+            this.lamp.turnOff();
         }
-
-        congTacMo() {
-            this.trangThaiCongTac = true;
-            this.BongDen.denSang();
-        }
-
-        conTacDong() {
-            this.trangThaiCongTac = false;
-            this.BongDen.denTat();
-        }
-
     }
 
-    let BongDen1 = new BongDen();
-    let CongTac1 = new CongTac();
-    CongTac1.noiBongDen(BongDen1);
-    CongTac1.congTacMo();
-    for (let i = 0; i < 10; i++) {
-        CongTac1.congTacMo();
-        document.write("Công tắc bật đèn: " + BongDen1.gettrangThai() + "<br>");
-        CongTac1.conTacDong();
-        document.write("Công tắc tắt đèn : " + BongDen1.gettrangThai() + "<br>");
-    }
+    let electricLamp = new ElectricLamp();
+    let switchButton = new SwitchButton();
+    switchButton.connectToLamp(electricLamp);
+    switchButton.switchOn();
+    document.write(electricLamp.getStatus()+ "<br>");
+    switchButton.switchOff();
+    document.write(electricLamp.getStatus());
+
 </script>
 </body>
 </html>

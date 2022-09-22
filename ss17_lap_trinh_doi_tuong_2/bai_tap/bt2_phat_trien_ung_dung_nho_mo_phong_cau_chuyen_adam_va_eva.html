@@ -6,71 +6,42 @@
 </head>
 <body>
 <script>
-    class Apple {
-        constructor(weight) {
-            this.weight = weight;
+    class Tao {
+        constructor(trongluong) {
+            this.trongluong = trongluong;
         }
-
-        decrease() {
-            this.weight--;
-        }
-
-        isEmpty() {
-            if (this.weight <= 0) {
-                return true;
-            } else {
-                return false
-            }
-        }
-
-        getWeight() {
-            return this.weight;
+        get getTrongLuong() {
+            return this.trongluong;
         }
     }
-
-    class Human {
-        constructor(name, gender, weight) {
-            this.name = name;
-            this.gender = gender;
-            this.weight = weight;
+    class Nguoi {
+        constructor(ten,gioitinh,can) {
+            this.ten = ten;
+            this.gioitinh = gioitinh;
+            this.can = can;
         }
-
-        getHuman() {
-            return this.name + this.gender + this.weight;
+        get getTen (){
+            return this.ten;
         }
-
-        say(String) {
-            document.write(String)
+        get getGioiTinh (){
+            return this.gioitinh;
         }
-
-        eat(Apple) {
-            if (Apple.weight > 0) {
-                this.weight++;
-                Apple.weight--;
-                document.write("Cân nặng táo còn " +Apple.weight + '<br>');
-                document.write("Cân nặng sau khi ăn táo "+this.weight + '<br>');
-            }
+        get getCan(){
+            return this.can;
         }
-
     }
-
-    let Apple1 = new Apple(10);
-    let Human1 = new Human("Adam", "male", 60);
-    let Human2 = new Human("Eva", "female", 45);
-    document.write(Apple1.getWeight() + '<br>');
-    document.write(Human1.getHuman() + '<br>');
-    document.write(Human2.getHuman() + '<br>');
-    Human1.eat(Apple1);
-    Human2.eat(Apple1);
-    while (Apple1.weight > 0) {
-        Human1.eat(Apple1);
-        if (Apple1.weight<=0) {
-            Human1.say("Hết táo rồi!");
+    let tao = new Tao(10);
+    let nguoi1 = new  Nguoi("Adam","Nam",65);
+    let nguoi2 = new Nguoi("Eva","Nữ",50);
+    let a =1;
+    for (let i=tao.getTrongLuong;i>0;i--) {
+        if(i%2==0) {
+            document.write(nguoi1.ten + " ăn táo" + "<br>" + "Quả táo còn: " + (i-1) + "đơn vị" + "<br>" + "Cân nặng của Adam là " + (nguoi1.can + a) + "<br>");
         }
-        Human2.eat(Apple1);
-        if (Apple1.weight<=0) {
-            Human2.say("Táo hết rồi!");
+        else {
+            document.write(nguoi2.ten + " ăn táo" + "<br>" + "Quả táo còn: " + (i-1) + "đơn vị" + "<br>" + "Cân nặng của Eva là " + (nguoi2.can + --a) + "<br>");
         }
+        a++;
     }
 </script>
 </body>
