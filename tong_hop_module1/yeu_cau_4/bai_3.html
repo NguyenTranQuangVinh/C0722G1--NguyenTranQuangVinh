@@ -5,8 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+<!--Bài 3: Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.-->
+<!--Ví dụ: s1 = "aabcc" và s2 = "adcaa", thì kết quả commonCharacterCount(s1, s2) = 3.-->
+<!--⇨	2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.-->
 <script>
+    let s1 = prompt("Nhập chuỗi ký tự thứ nhất: ");
+    let s2 = prompt("Nhập chuỗi kí tự thứ hai: ");
 
+    let arr1 = s1.split("");
+    let arr2 = s2.split("");
+    let arr3 = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
+                arr3.push(arr1[i]);
+                arr1.splice(i, 1);
+                arr2.splice(j, 1);
+            }
+        }
+    }
+    alert(" Số lượng kí tự chung là: " + arr3.length + " .Kí tự chung là: " + arr3);
 </script>
 </body>
 </html>

@@ -5,24 +5,41 @@
     <title>Title</title>
 </head>
 <body>
+<!--Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa.-->
+<!--Ví dụ tRuong    TaN   HAI => Truong Tan Hai.-->
+<!--Và một hàm tìm từ dài nhất trong 1 xâu ký tự. -->
+<!--Hàm main sử dụng các hàm này để nhập xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.-->
 <script>
     let ten = prompt("Nhập tên ");
-function chuyenDoi(name) {
-    name=name.toLowerCase();
-    let arr = name.split(" ");
-    let arr1=[];
-    for (let i = 0; i <arr.length ; i++) {
-        if (arr[i]!==""){
-            arr1.push(arr[i].split(""));
+
+    function chuyenDoi(name) {
+        name = name.toLowerCase();
+        let arr = name.split(" ");
+        let arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== "") {
+                arr1.push(arr[i].split(""));
+            }
         }
+        for (let i = 0; i < arr1.length; i++) {
+            arr1[i][0] = arr1[i][0].toLocaleUpperCase();
+            arr1[i] = arr1[i].join("");
+        }
+        return arr1.join(" ");
     }
-    for (let i = 0; i <arr1.length ; i++) {
-        arr1[i][0]= arr1[i][0].toLocaleUpperCase();
-        arr1[i]=arr1[i].join("");
+    function demKyTu(arr2){
+        arr2 = arr2.split(" ");
+        let doDaiLonNhat = arr2[0];
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr2[i].length > doDaiLonNhat.length) {
+                doDaiLonNhat = arr2[i];
+            }
+        }
+        return doDaiLonNhat;
     }
-    return arr1.join(" ");
-}
-    document.write("Tên sau khi chuyển hóa: "+chuyenDoi(ten));
+    alert("Xâu trước khi chuyển hóa là: " + ten);
+    alert("Xâu sau khi chuyển hóa là: " + chuyenDoi(ten) + ". Từ dài nhất xâu là: " + demKyTu(ten));
+
 </script>
 </body>
 </html>

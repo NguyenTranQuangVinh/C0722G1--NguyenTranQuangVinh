@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Xổ số VIETLOT</b><br>
+<input type="text" id="so1">
+<input type="text" id="so2">
+<input type="text" id="so3">
+<input type="text" id="so4">
+<input type="text" id="so5">
+<input type="text" id="so6">
+<br>
+<input type="text" id="random1">
+<input type="text" id="random2">
+<input type="text"id="random3">
+<input type="text" id="random4">
+<input type="text" id="random5">
+<input type="text" id="random6">
+<br>
+<input type="button" onclick="nhapSo()" value="Mua vé">
+<input type="button" onclick="ketQua()" value="Xem kết quả ">
+</body>
+<script !src="">
+    let luaChon = +prompt('Bạn có 2 lựa chọn:\n ' +
+        '1.Bạn muốn tự chọn số.\n' +
+        ' 2.Hệ thống tự RamDom.\n');
+    switch (luaChon) {
+        case 1:
+            nhapSo();
+            break;
+        case 2:
+            randomSo();
+            break;
+    }
+
+
+    function nhapSo() {
+        let so1 = document.getElementById("so1").value;
+        let so2 = document.getElementById("so2").value;
+        let so3 = document.getElementById("so3").value;
+        let so4 = document.getElementById("so3").value;
+        let so5 = document.getElementById("so5").value;
+        let so6 = document.getElementById("so6").value;
+        let mangSoTuNhap = [so1,so2,so3,so4,so5,so6];
+        return mangSoTuNhap;
+    }
+    function randomSo() {
+        let random1 = parseInt(Math.random()*100);
+        document.getElementById("so1").value = random1;
+        let random2 = parseInt(Math.random()*100);
+        document.getElementById("so2").value = random2;
+        let random3 = parseInt(Math.random()*100);
+        document.getElementById("so3").value = random3;
+        let random4 = parseInt(Math.random()*100);
+        document.getElementById("so4").value = random4;
+        let random5 = parseInt(Math.random()*100);
+        document.getElementById("so5").value = random5;
+        let random6 = parseInt(Math.random()*100);
+        document.getElementById("so6").value = random6;
+
+        let mangRandom = [random1,random2,random3,random4,random5,random6];
+        return mangRandom;
+    }
+
+    function ketQua() {
+        let kq1 = parseInt(Math.random()*100);
+        document.getElementById("random1").value = kq1;
+        let kq2 = parseInt(Math.random()*100);
+        document.getElementById("random2").value = kq2;
+        let kq3 = parseInt(Math.random()*100);
+        document.getElementById("random3").value = kq3;
+        let kq4 = parseInt(Math.random()*100);
+        document.getElementById("random4").value = kq4;
+        let kq5 = parseInt(Math.random()*100);
+        document.getElementById("random5").value = kq5;
+        let kq6 = parseInt(Math.random()*100);
+        document.getElementById("random6").value = kq6;
+        let mangKetQua = [kq1,kq2,kq3,kq4,kq5,kq6];
+
+        let dem = 0;
+        let so1 = document.getElementById("so1").value;
+        let so2 = document.getElementById("so2").value;
+        let so3 = document.getElementById("so3").value;
+        let so4 = document.getElementById("so3").value;
+        let so5 = document.getElementById("so5").value;
+        let so6 = document.getElementById("so6").value;
+        let mangSoTuNhap = [so1,so2,so3,so4,so5,so6];
+
+        for (let i = 0; i < mangSoTuNhap.length; i++) {
+            if(mangSoTuNhap[i]===mangKetQua[i]){
+                dem++;
+            }
+        }
+        if(dem===6){
+            alert("Chúc mừng bạn đạt được giải độc đắc");
+        } else if(dem===5){
+            alert("Chúc mừng bạn đạt được giải nhất");
+        } else if(dem===5){
+            alert("Chúc mừng bạn đạt được giải nhì");
+        }
+        else {
+            alert("chúc bạn may mắn lần sau");
+        }
+    }
+</script>
+</html>

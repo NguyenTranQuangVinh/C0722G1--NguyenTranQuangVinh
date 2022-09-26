@@ -5,18 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<!--Bài 2: Cho 2 mảng A và B chứa số nguyên.
+Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A-->
+<!--Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện-->
+<!--Ví dụ:  A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3]
+thì kết quả missingValue(A, B) = [4, 6]-->
 <script>
-    let numberA =[7,2,5,3,5,3];
-    let numberB =[7,2,5,4,6,3,5,3];
-    let result = [];
-    for (let i = 0; i < numberB.length; i++) {
-        if(numberA.includes(numberB[i])===false){
-            if (result.includes(numberB[i])===false){
-                result.push(numberB[i]);
-            }
+    let arrA=[7,2,5,3,5,3];
+    let arrB=[7,2,5,4,6,3,5,3];
+    let arrC=[];
+    for (let i = 0; i <arrA.length ; i++) {
+        if (arrA.includes(arrB[i])===false){
+            arrC.push(arrB[i]);
         }
     }
-    document.write(result);
+    alert(arrC);
 </script>
 </body>
 </html>

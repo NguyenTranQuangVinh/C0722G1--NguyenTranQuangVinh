@@ -5,15 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<!--Bài 2: Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó-->
+<!--Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.-->
+<!--⇨	Có 3 kí tự khác nhau là a, b và c.-->
 <script>
-    let arr="cabca";
-    let arr1=arr.split("");
-    let arr2=[];
-    for (let i = 0; i <arr1.length; i++) {
-        if(!arr2.includes(arr1[i])){
-            arr2.push(arr1[i])
+let kyTu = "cabca";
+let kyTu1 = kyTu.split("");
+let kyTu2 =[];
+let count =0;
+for (let i = 0; i < kyTu1.length ; i++) {
+        if (!kyTu2.includes(kyTu1[i])){
+            kyTu2.push(kyTu1[i]);
+            count++;
         }
-    }alert(arr2)
+}
+document.write("Các ký tự khác nhau: "+kyTu2+"<br>"+" có "+count +" kí tự khác nhau.");
 </script>
 </body>
 </html>

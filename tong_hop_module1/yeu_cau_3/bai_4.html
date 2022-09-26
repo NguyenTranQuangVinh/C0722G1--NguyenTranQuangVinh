@@ -5,41 +5,44 @@
     <title>Title</title>
 </head>
 <body>
+<!--Bài 4: Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ.-->
+<!--Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.-->
 <script>
-    let nhapSo = prompt("nhập vào một só");
+    let nhapSo = +prompt("Nhập số bất kì: ");
     let kq = "";
-    for (let i = 0; i < nhapSo.length; i++) {
-        switch (nhapSo[i]) {
-            case "0":
-                kq += " Không ";
-                break;
-            case "1":
-                kq += " Một ";
-                break;
-            case "2":
-                kq += " Hai ";
-                break;
-            case "3":
-                kq += " Ba ";
-                break;
-            case "4":
-                kq += " Bốn ";
-                break;
-            case "5":
-                kq += " Năm ";
-                break;
-            case "6":
-                kq += " Sáu ";
-                break;
-            case "7":
-                kq += " Bảy ";
-                break;
-            case "8":
-                kq += " Tám ";
-                break;
-            case "9":
-                kq += " Chín ";
-                break;
+    switch (nhapSo) {
+        case 0:
+            kq += "Không";
+            break;
+        case 1:
+            kq += "Một";
+            break;
+        case 2:
+            kq += "Hai";
+            break;
+        case 3:
+            kq += "Ba";
+            break;
+        case 4:
+            kq += "Bốn";
+            break;
+        case 5:
+            kq += "Năm";
+            break;
+        case 6:
+            kq += "Sáu";
+            break;
+        case 7:
+            kq += "Bảy";
+            break;
+        case 8:
+            kq += "Tám";
+            break;
+        case 9:
+            kq += "Chín";
+            break;
+        default:{
+            kq+= "Chưa code số này";
         }
     }
     alert(kq);

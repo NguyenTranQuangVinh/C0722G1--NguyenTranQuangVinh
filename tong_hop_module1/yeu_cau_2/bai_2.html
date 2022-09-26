@@ -5,24 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+<!--Bài 2: Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh là nguyên âm hay phụ âm. -->
+<!--Ký tự là bất kỳ được nhập từ bàn phím. -->
+<!--Các ký tự nguyên âm bao gồm: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'-->
+</body>
 <script>
-    let nguyenAm1 = ["u", "e", "o", "a", "i"];
-    let nguyenAm2 = ["U", "E", "O ", "A", "I"];
-    let kiTu = prompt("nhập kí tự bất kì: ");
-
-
+    let nguyenAm1=['o', 'u', 'i', 'a', 'e'];
+    let nguyenAm2=['O', 'U', 'I', 'A', 'E'];
+    let kyTu = prompt("Nhập ký tự: ");
     let kiemTra = false;
     for (let i = 0; i < nguyenAm1.length; i++) {
-        if (kiTu === nguyenAm1[i]|| kiTu === nguyenAm2[i]) {
+        if (kyTu === nguyenAm1[i]|| kyTu===nguyenAm2[i]) {
             kiemTra = true;
         }
     }
-        if(kiemTra){
-            document.write(kiTu+" là nguyên âm ");
-        } else {
-            document.write(kiTu+" là phụ âm ");
-        }
-
+    if (kiemTra){
+        alert(kyTu+"là nguyên âm: ");
+    }else {
+        alert(kyTu+"là phụ âm: ");
+    }
 </script>
-</body>
 </html>

@@ -2,68 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>-</title>
 </head>
 <body>
+<!--Bài 5: Giả sử menu của chúng ta có các loại thức uống như sau:-->
+<!--Cafe-->
+<!--Cam vắt-->
+<!--Nước ép cà rốt-->
+<!--Nước ép cà chua-->
+<!--Nước lọc-->
+<!--Nước dừa-->
+<!--Viết một chương trình gọi thức uống đơn giản.-->
+<!--Gợi ý: Trước tiên in ra màn hinh danh sách các loại thức uống cho người dùng chọn lựa-->
+<!--Đánh dấu theo thứ tự 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món)-->
+<!--Khi người dùng lựa chọn 1 trong số các thức uống, chương trình sẽ hiện đơn giá của thức uống đó và cho phép người dùng nhập số lượng. Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.-->
+<!--Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống, kết thúc quá trình đặt thức uống khi người nhấn số 7-->
 <script>
-    let tongTien = 0;
-    let flag=true;
-    do {
-        let menu = prompt("Menu \n" +
-            "1. Cafe\n" +
-            "2. Cam vắt\n" +
-            "3. Nước ép cà rốt\n" +
-            "4. Nước ép cà chua\n" +
-            "5. Nước lọc\n" +
-            "6. Nước dừa\n" +
-            "7. Thoát gọi món");
 
-        let soLuong = 0;
-        let gia1 = 10;
-        let gia2 = 20;
-        let gia3 = 20;
-        let gia4 = 20;
-        let gia5 = 5;
-        let gia6 = 30;
-        switch (menu) {
-            case "1":
-                alert("Giá của cafe là: " + gia1 + ".000 VNĐ");
-                soLuong = prompt("Nhập số luọng cafe: ");
-                tongTien += gia1 * soLuong;
-                break;
-            case "2":
-                alert("Giá của cam vắt là: " + gia2 + ".000 VNĐ");
-                soLuong = prompt("Nhập số lương nước cam vắt: ");
-                tongTien += gia1 * soLuong;
-                break;
-            case "3":
-                alert("Giá của nước ép cà rốt là: " + gia3 + ".000");
-                soLuong = prompt("Nhập số lượng nước ép cà rốt: ");
-                tongTien += gia1 * soLuong;
-                break;
-            case "4":
-                alert("Giá của nước ép cà chua là: " + gia4 + ".000");
-                soLuong = prompt("Nhập số lượng nước ép cà chua: ");
-                tongTien += gia1 * soLuong;
-                break;
-            case "5":
-                alert("Giá của nước lọc là: " + gia5 + ".000");
-                soLuong = prompt("Nhập số lượng nước lọc: ")
-                tongTien += gia1 * soLuong;
-                break;
-            case "6":
-                alert("Giá của nước dừa là: " + gia6 + ".000");
-                soLuong = prompt("Nhập số lượng nước dừa: ")
-                tongTien += gia1 * soLuong;
-                break;
-            default :
-                alert("Thoát gọi món.");
-                flag=false;
-
-        }
-    }while (flag)
-
-alert("tổng tiền hóa đơn "+tongTien+".000 VND.");
 </script>
 </body>
 </html>

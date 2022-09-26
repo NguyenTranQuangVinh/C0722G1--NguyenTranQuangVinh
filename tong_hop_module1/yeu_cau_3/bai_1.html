@@ -5,16 +5,29 @@
     <title>Title</title>
 </head>
 <body>
+<!--Bài 1: Cho mảng a chỉ chứa các số nguyên-->
+<!--Xây dựng mảng b là prefix sums của mảng a cụ thể theo công thức:-->
+<!--b[0]   = a[0]-->
+<!--b[1]   = a[0] + a[1]-->
+<!--b[2]   = a[0] + a[1] + a[2]-->
+<!--...-->
+<!--b[n - 1] = a[0] + a[1] + ... + a[n - 1]-->
+<!--với n là độ dài của mảng a.-->
+<!--Ví dụ: Cho a = [1, 2, 3], thì kết quả prefixSums(a) = [1, 3, 6].-->
+<!--Mảng b được tạo ra: [1, 1 + 2, 1 + 2 + 3] = [1, 3, 6]-->
 <script>
-    let arr = [1,2,3,4,5,6,7,8,9];
-    let array = [];
-    let sum = 0;
-    for (let i = 0; i <arr.length ; i++) {
-        sum += arr[i]
-        array[i] = sum ;
-
+    let size = +prompt("Nhập độ dài mảng a: ");
+    let arr = [];
+    for (let i = 0; i < size; i++) {
+        arr[i] = +prompt("Nhập phần tử mảng: ");
     }
-    document.write(array);
+    let tong = 0;
+    let newArr = [];
+    for (let i = 0; i < arr.length ; i++) {
+      tong +=arr[i];
+      newArr.push(tong);
+    }
+    alert(newArr);
 </script>
 </body>
 </html>
